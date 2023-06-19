@@ -20,7 +20,7 @@ int Menu::registerItem(char *name, void (*handler)()) {
     .nameSize = strlen(name),
     .handler = handler,
   };
-  mItems = (Item *)realloc(mItems, (mItemsCount + 1) * sizeof(Item));
+  mItems = realloc(mItems, (mItemsCount + 1) * sizeof(Item));
   mItems[mItemsCount] = newItem;
 
   mItemsCount++;
